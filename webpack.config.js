@@ -5,15 +5,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
-require('babel-polyfill')
+
 
 module.exports = {
 
     entry: {
         main: [
-            'babel-polyfill',
              './src/main.js',
-            './src/assets/scss/main.scss',
         ],
 
        // vue: [
@@ -84,7 +82,7 @@ module.exports = {
                 },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader', 'postcss-loader']
             },
 
             {

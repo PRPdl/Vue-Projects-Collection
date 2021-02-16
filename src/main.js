@@ -1,11 +1,7 @@
 import Vue from 'vue';
 import App from "./App.vue";
 import router from "./router";
-
-Vue.component(
-  'error-class', {
-    template: '<p class="active"> This is error class. </p>'
-})
+import "tailwindcss/tailwind.css"
 
 new Vue({
     router,
